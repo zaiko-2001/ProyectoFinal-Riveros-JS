@@ -41,6 +41,30 @@ const productos = [
       precio: 5500,
       imagen: "imagenes/taza 6.png",
     },
+    {
+        id: 7,
+        nombre: "Taza Selva Mistíca",
+        descripcion: "Esta taza presenta un diseño de la selva que te transporta a un mundo de aventuras y misterios.",
+        precio: 5300,
+        imagen: "imagenes/taza 7.png",
+    },
+    {
+        id: 8,
+        nombre: "Taza Bailarinas en el Viento",
+        descripcion: "Esta taza captura el elegante movimiento de las bailarinas, con un diseño pintado que evoca gracia y armonía.",
+        precio: 5600,
+        imagen: "imagenes/taza 8.png",
+    },
+    {
+        id: 9,
+        nombre: "Taza Atardecer en la Playa",
+        descripcion: "Esta taza te hará sentir la brisa marina y el sonido de las olas con cada sorbo, perfecta para quienes extrañan el mar.",
+        precio: 5500,
+        imagen: "imagenes/taza 9.png",
+    },
+      
+   
+    
   ];
 
   

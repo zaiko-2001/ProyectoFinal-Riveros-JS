@@ -1,3 +1,4 @@
+
 function mostrarProductos() {
     const productosContainer = document.querySelector("#productos .row");
   
