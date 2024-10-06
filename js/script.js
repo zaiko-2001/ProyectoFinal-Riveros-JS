@@ -25,6 +25,9 @@ function agregarAlCarrito(event) {
 
   actualizarCarrito();
   localStorage.setItem("carrito", JSON.stringify(carrito));
+
+  // Mostrar notificación con Alertify.js
+  alertify.success(`${productoNombre} ha sido agregado al carrito.`);
 }
 
 function actualizarCarrito() {
