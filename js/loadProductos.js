@@ -14,7 +14,7 @@ function mostrarProductos() {
       <p class="card-text"><strong>$${producto.precio.toLocaleString(
         "es-CL"
       )}</strong></p>
-      <button class="btn btn-secondary agregar-carrito" 
+      <button class="btn btn-outline-success agregar-carrito" 
               data-id="${producto.id}" 
               data-nombre="${producto.nombre}" 
               data-precio="${producto.precio}">
