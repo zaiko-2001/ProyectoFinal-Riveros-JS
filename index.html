@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Simulador JS</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="imagenes/R.svg" type="image/x-icon" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- NavBar -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark sticky-top"
+      style="background-color: rgb(236, 132, 36)"
+    >
+      <div class="container px-4">
+        <a class="navbar-brand" href="/">
+          <span
+            style="
+              color: #ffffff;
+              font-size: 26px;
+              font-weight: bold;
+              letter-spacing: 1px;
+            "
+            >E-Commerce</span
+          >
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0" style="font-weight: 500">
+            <li class="nav-item">
+              <a class="nav-link" href="#inicio">INICIO</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#productos">PRODUCTOS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#footer">CONTACTO</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#carrito">CARRITO</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <!-- Inicio -->
+      <section
+        id="inicio"
+        class="hero d-flex justify-content-center align-items-center"
+      >
+        <div class="text-center">
+          <h1 class="hero-titulo">
+            Comercio Digital a pocos clicks de distancia
+          </h1>
+          <p class="hero-parrafo">
+            Descubre cómo el comercio digital está transformando la manera en
+            que conectamos con el mundo.
+          </p>
+          <a class="hero-ancla" href="#productos"
+            >Mira nuestros productos aquí!</a
+          >
+        </div>
+        <!-- Productos -->
+      </section>
+      <section id="productos" class="py-5">
+        <div class="container">
+          <h2 class="text-center mb-4">Nuestros Productos</h2>
+          <div class="row"></div>
+        </div>
+      </section>
+      <!-- Carrito -->
+      <section id="carrito" class="py-5">
+        <div class="container">
+          <h2 class="text-center mb-4">Carrito de Compras</h2>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Tu Carrito</h5>
+              <div id="carrito-items">
+                <p class="text-muted">Tu carrito está vacío.</p>
+              </div>
+              <div class="d-flex justify-content-between mt-3">
+                <span>
+                  <strong>Total: $<span id="carrito-total">0.00</span></strong>
+                </span>
+              </div>
+              <button id="vaciar-carrito" class="btn btn-danger">
+                Vaciar Carrito
+              </button>
+              <a href="#" class="btn btn-success">Finalizar Compra</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer
+      id="footer"
+      class="text-center text-white"
+      style="background-color: rgb(236, 132, 36); padding: 10px 0"
+    >
+      <div class="container">
+        <div class="row">
+          <!-- Sección de información -->
+          <div class="col-md-4 mb-3">
+            <h5>Sobre Nosotros</h5>
+            <p>
+              Somos una tienda dedicada a ofrecer los mejores productos
+              digitales a pocos clicks de distancia.
+            </p>
+          </div>
+
+          <!-- Sección de links -->
+          <div class="col-md-4 mb-3">
+            <h5>Enlaces Rápidos</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#inicio" class="text-white text-decoration-none"
+                  >Inicio</a
+                >
+              </li>
+              <li>
+                <a href="#productos" class="text-white text-decoration-none"
+                  >Tienda</a
+                >
+              </li>
+              <li>
+                <a href="#footer" class="text-white text-decoration-none"
+                  >Contacto</a
+                >
+              </li>
+              <li>
+                <a href="#carrito" class="text-white text-decoration-none"
+                  >Carrito</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Sección de contacto -->
+          <div class="col-md-4 mb-3">
+            <h5>Contáctanos</h5>
+            <p>Email: contacto@tienda.com</p>
+            <p>Teléfono: +56 9 1234 5678</p>
+            <p>Ubicación: Santiago, Chile</p>
+          </div>
+        </div>
+        <div class="mt-4">
+          <p>&copy; 2024 Paulo Riveros. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Script -->
+    <script src="js/script.js"></script>
+    <script src="js/productos.js"></script>
+    <script src="js/loadProductos.js"></script>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

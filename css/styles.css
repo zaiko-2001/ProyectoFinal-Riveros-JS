@@ -1,0 +1,43 @@
+
+
+.hero {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.4)
+    ),
+    url("background-hero.jpeg");
+  background-size: cover;
+  background-position: center;
+  font-family: sans-serif;
+  height: 580px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-titulo {
+  color: rgb(43, 21, 1);
+  font-size: 40px;
+  font-weight: 700;
+  margin: 10px;
+}
+.hero-parrafo {
+  color: black;
+  font-size: 26px;
+  margin: 20px;
+  margin-bottom: 80px;
+}
+.hero-ancla {
+    text-decoration: none;
+    font-size: 22px;
+    color: white;
+    background-color: rgba(236, 132, 36, 0.8);
+    padding: 30px;
+    border-radius: 16px;
+}
+
+.hero-ancla:hover {
+    background-color: white;
+    color: rgb(236, 132, 36);
+    transition: 0.3s ease-in-out;
+}
+
