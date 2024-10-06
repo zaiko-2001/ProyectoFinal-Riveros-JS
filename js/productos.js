@@ -62,9 +62,27 @@ const productos = [
         precio: 5500,
         imagen: "imagenes/taza 9.png",
     },
-      
-   
-    
+    {
+      id: 10,
+      nombre: "Taza Amanecer Dorado",
+      descripcion: "Con tonos cálidos y brillantes, esta taza es perfecta para esos momentos en los que necesitas un poco de sol en tu vida.",
+      precio: 5800,
+      imagen: "imagenes/taza 10.png",
+  },  
+  {
+    id: 11,
+    nombre: "Taza Bosque Encantado",
+    descripcion: "Sumérgete en la tranquilidad de un bosque encantado con esta taza que presenta un diseño de árboles frondosos y criaturas mágicas.",
+    precio: 5300,
+    imagen: "imagenes/taza 11.png",
+},
+{
+  id: 12,
+  nombre: "Taza Anochecer en la Ciudad",
+  descripcion: "Esta taza captura la magia del anochecer, con un diseño pintado que refleja la impresionante mezcla de luces y sombras sobre la ciudad.",
+  precio: 5200,
+  imagen: "imagenes/taza 12.png",
+},
   ];
 
   
