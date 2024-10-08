@@ -185,12 +185,36 @@
         </div>
       </div>
     </footer>
+<!-- Modal Bootstrap -->
+<div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content ">
+      <div class="modal-header">
+        <h5 class="modal-title" id="productModalLabel">Título del Producto</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img src="" id="modal-product-image" class="img-fluid mb-3" alt="Imagen del producto">
+        <p id="modal-product-description"></p>
+        <p id="modal-product-price"></p>
+        <ul id="modal-product-caracteristicas">
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-outline-success" id="add-to-cart-modal">Agregar al Carrito</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
     <!-- Script -->
     <script src="js/script.js"></script>
     <script src="js/productos.js"></script>
     <script src="js/loadProductos.js"></script>
-
+    <script src="scroll.js"></script>
     <!-- Bootstrap JavaScript Libraries -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
