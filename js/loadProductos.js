@@ -37,13 +37,13 @@ function mostrarProductos() {
     productosContainer.insertAdjacentHTML("beforeend", productoHTML);
   });
 
-  // Agregar los eventos a los botones de agregar al carrito
+  
   const botonesCarrito = document.querySelectorAll(".agregar-carrito");
   botonesCarrito.forEach((boton) => {
     boton.addEventListener("click", agregarAlCarrito);
   });
 
-  // Agregar los eventos a los botones de "Ver más"
+  
   const botonesVerMas = document.querySelectorAll(".ver-mas");
   botonesVerMas.forEach((boton) => {
     boton.addEventListener("click", mostrarDetallesProducto);
@@ -55,13 +55,13 @@ document.addEventListener("DOMContentLoaded", mostrarProductos);
 function mostrarDetallesProducto(event) {
   const { id, nombre, descripcion, precio, imagen, material, tamaño, capacidad } = event.target.dataset;
 
-  // Llenar el contenido del modal con los datos del producto
+  
   document.getElementById("productModalLabel").textContent = nombre;
   document.getElementById("modal-product-description").textContent = descripcion;
   document.getElementById("modal-product-price").innerHTML = `<strong>Precio: $${parseInt(precio).toLocaleString("es-CL")}</strong>`;
   document.getElementById("modal-product-image").src = imagen;
 
-  // Llenar las características del producto
+  
   const caracteristicasList = document.getElementById("modal-product-caracteristicas");
   caracteristicasList.innerHTML = `
     <li><strong>Material:</strong> ${material}</li>
@@ -69,13 +69,13 @@ function mostrarDetallesProducto(event) {
     <li><strong>Capacidad:</strong> ${capacidad}</li>
   `;
 
-  // Configurar el botón de agregar al carrito del modal
+ 
   const addToCartModalButton = document.getElementById("add-to-cart-modal");
   addToCartModalButton.dataset.id = id;
   addToCartModalButton.dataset.nombre = nombre;
   addToCartModalButton.dataset.precio = precio;
 
-  // Agregar el evento al botón del modal para agregar el producto al carrito
+  
   addToCartModalButton.onclick = function() {
     agregarAlCarrito({ target: addToCartModalButton });
   };
