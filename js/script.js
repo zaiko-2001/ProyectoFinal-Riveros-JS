@@ -1,11 +1,8 @@
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
-const botonesCarrito = document.querySelectorAll(".agregar-carrito");
 const botonVaciarCarrito = document.getElementById("vaciar-carrito");
-
-botonesCarrito.forEach((boton) => {
-  boton.addEventListener("click", agregarAlCarrito);
-});
+const botonCerrarCarrito = document.getElementById("cerrar-carrito");
+const botonToggleCarrito = document.getElementById("toggleCarrito");
 
 function agregarAlCarrito(event) {
   const { id: productoId, nombre: productoNombre, precio: productoPrecio } = event.target.dataset;
@@ -26,8 +23,20 @@ function agregarAlCarrito(event) {
   actualizarCarrito();
   localStorage.setItem("carrito", JSON.stringify(carrito));
 
-  
-  alertify.success(`${productoNombre} ha sido agregado al carrito.`);
+  Toastify({
+    text: `${productoNombre} ha sido agregado al carrito.`,
+    duration: 3000,
+    gravity: "bottom",
+    position: "right",
+    close: true,
+    style: {
+      background: "linear-gradient(to right, rgba(0,176,155), rgba(255,128,0,0.9))",
+      borderRadius: "8px",
+    }
+  }).showToast();
+
+  const carritoSidebar = document.getElementById("carrito-sidebar");
+  carritoSidebar.classList.add("show");
 }
 
 function actualizarCarrito() {
@@ -56,13 +65,23 @@ function actualizarCarrito() {
   carritoTotal.textContent = total.toFixed(2);
 }
 
-
 function vaciarCarrito() {
   carrito = []; 
   localStorage.removeItem("carrito"); 
   actualizarCarrito(); 
 }
 
+
 botonVaciarCarrito.addEventListener("click", vaciarCarrito);
+botonCerrarCarrito.addEventListener("click", () => {
+  const carritoSidebar = document.getElementById("carrito-sidebar");
+  carritoSidebar.classList.remove("show");
+});
+
+botonToggleCarrito.addEventListener("click", () => {
+  const carritoSidebar = document.getElementById("carrito-sidebar");
+  carritoSidebar.classList.toggle("show");
+});
+
 
 document.addEventListener("DOMContentLoaded", actualizarCarrito);

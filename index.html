@@ -18,16 +18,8 @@
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
       crossorigin="anonymous"
     />
-    <!-- Animated CSS -->
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
-  <!-- Alertify JS CSS -->
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
-<!-- AlertifyJS Default Theme -->
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"/>
-
+  <!-- Toastify CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
   </head>
   <body>
     <!-- NavBar -->
@@ -70,8 +62,9 @@
               <a class="nav-link" href="#footer">CONTACTO</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#carrito">CARRITO</a>
-            </li>
+              <button class="nav-link" id="toggleCarrito">CARRITO</button>           
+             </li>
+            
           </ul>
         </div>
       </div>
@@ -90,7 +83,7 @@
             Descubre cómo el comercio digital está transformando la manera en
             que conectamos con el mundo.
           </p>
-          <div class="animate__animated animate__pulse animate__fast">
+          <div>
           <a class="hero-ancla" href="#productos"
             >Mira nuestros productos aquí!</a
           > 
@@ -105,28 +98,19 @@
         </div>
       </section>
       <!-- Carrito -->
-      <section id="carrito" class="py-5">
-        <div class="container">
-          <h2 class="text-center mb-4">Carrito de Compras</h2>
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Tu Carrito</h5>
-              <div id="carrito-items">
-                <p class="text-muted">Tu carrito está vacío.</p>
-              </div>
-              <div class="d-flex justify-content-between mt-3">
-                <span>
-                  <strong>Total: $<span id="carrito-total">0.00</span></strong>
-                </span>
-              </div>
-              <button id="vaciar-carrito" class="btn btn-danger">
-                Vaciar Carrito
-              </button>
-              <a href="#" class="btn btn-success">Finalizar Compra</a>
-            </div>
-          </div>
+      <div id="carrito-sidebar">
+        <div class="carrito-header">
+          <h4>Tu Carrito</h4>
+          <button class="close-btn" id="cerrar-carrito">&times;</button>
         </div>
-      </section>
+        <div id="carrito-items"></div>
+        <div class="d-flex justify-content-between align-items-center">
+          <strong>Total:</strong>
+          <span id="carrito-total">0</span>
+        </div>
+        <button class="btn btn-vaciar mt-4 mb-3" id="vaciar-carrito">Vaciar Carrito</button>
+        <a href="#" class="btn boton-compra">Finalizar Compra</a>
+      </div>
     </main>
     <!-- Footer -->
     <footer
@@ -185,9 +169,9 @@
         </div>
       </div>
     </footer>
-<!-- Modal Bootstrap -->
+<!-- Modal Ver Mas -->
 <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-sm">
+  <div class="modal-dialog ">
     <div class="modal-content ">
       <div class="modal-header">
         <h5 class="modal-title" id="productModalLabel">Título del Producto</h5>
@@ -201,8 +185,8 @@
         </ul>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-outline-success" id="add-to-cart-modal">Agregar al Carrito</button>
+        <button type="button" class="btn btn-vermas" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn boton-compra" id="add-to-cart-modal">Agregar al Carrito</button>
       </div>
     </div>
   </div>
@@ -212,9 +196,7 @@
 
     <!-- Script -->
     <script src="js/script.js"></script>
-    <script src="js/productos.js"></script>
     <script src="js/loadProductos.js"></script>
-    <script src="scroll.js"></script>
     <!-- Bootstrap JavaScript Libraries -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
@@ -226,8 +208,7 @@
       integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
       crossorigin="anonymous"
     ></script>
-    <!-- AlertifyJS Script -->
-<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
-
+   <!-- Toastify JS -->
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
   </body>
 </html>

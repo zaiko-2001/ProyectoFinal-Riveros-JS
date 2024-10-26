@@ -1,3 +1,8 @@
+#toggleCarrito {
+border: none;
+background-color: rgb(236, 132, 36);
+
+}
 
 .hero {
   background-image: linear-gradient(
@@ -39,16 +44,115 @@
     color: rgb(236, 132, 36);
     transition: 0.3s ease-in-out;
 }
+
+.boton-compra {
+  font-size: 16px !important;
+    color: white !important;
+    background-color: rgb(236, 96, 36) !important;
+    padding: 10px !important;
+    border-radius: 10px !important;
+}
+.boton-compra:hover {
+  background-color: white !important;
+    color: rgb(236, 96, 36) !important;
+    transition: 0.3s ease-in-out !important;
+    border-color: rgb(236, 96, 36) !important;
+}
+
+.btn-vermas{
+  font-size: 16px !important;
+    color: white !important;
+    background-color: rgb(54, 69, 79)  !important;
+    padding: 10px !important;
+    border-radius: 10px !important;
+}
+.btn-vermas:hover{
+  background-color: white !important;
+  color: rgb(54, 69, 79) !important;
+  transition: 0.3s ease-in-out !important;
+  border-color: rgb(54, 69, 79) !important;
+}
+.btn-vaciar {
+  font-size: 16px !important;
+    color: white !important;
+    background-color: rgb(34, 139, 78)  !important;
+    padding: 10px !important;
+    border-radius: 10px !important;
+}
+.btn-vaciar:hover{
+  background-color: white !important;
+  color: rgb(34, 139, 78)  !important;
+  transition: 0.3s ease-in-out !important;
+  border-color: rgb(34, 139, 78)  !important;
+}
+
 @media (max-width: 992px) {
   .col-md-6, .col-6 {
-    flex: 0 0 50%; /* 2 cards por fila en pantallas medianas y pequeñas */
-    max-width: 50%; /* Limita el ancho de las cards */
+    flex: 0 0 50%; 
+    max-width: 50%; 
   }
 }
 
 @media (max-width: 768px) {
   .col-lg-3, .col-md-6, .col-6 {
-    flex: 0 0 100%; /* 1 card por fila en pantallas pequeñas */
-    max-width: 100%; /* Limita el ancho de las cards */
+    flex: 0 0 100%; 
+    max-width: 100%; 
   }
+}
+#carrito-sidebar {
+  position: fixed;
+  top: 68px;
+  right: -400px;
+  width: 300px;
+  height: 70%;
+  background-color: #fcfcfc;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
+  transition: right 0.3s;
+  padding: 20px;
+  overflow-y: auto;
+  z-index: 9999;
+  border-radius: 16px;
+}
+
+#carrito-sidebar.show {
+  right: 0;
+}
+
+#carrito-items {
+  margin-bottom: 20px;
+}
+
+.carrito-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+}
+@media (max-width: 768px) {
+  #carrito-sidebar {
+    width: 80%; 
+    right: -80%; 
+  }
+
+  #carrito-sidebar.show {
+    right: 0; 
+  }
+
+  .carrito-header {
+    flex-direction: column; 
+    align-items: flex-start; 
+  }
+
+  .close-btn {
+    align-self: flex-end; 
+  }
+}
+.card {
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+
 }
